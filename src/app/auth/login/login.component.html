@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>App</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-button id="open-modal" expand="block" (click)="setOpen(true)"> login </ion-button>
+<ion-modal trigger="open-modal" [isOpen]="isModalOpen" [initialBreakpoint]="1" [breakpoints]="[0, 1]">
+    <ng-template>
+      <div class="block">
+        <ion-icon name="close" class="close-ion" (click)="setOpen(false)"></ion-icon>
+        <div class="login-and-create-account">
+          <span  (click)="userAuthInfo('login')" [ngClass]="login === true ? 'active' : 'inActive' "> Login</span>
+          <span class="divider">|</span>
+          <span  (click)="userAuthInfo('signup')"  [ngClass]="signup === true ? 'active' : 'inActive' ">Create Account</span>
+        </div>
+
+        <!-- login -->
+        <div *ngIf="login">
+          <ion-item class="rentast-input mobile-number-input">
+           <ion-input type="Username" placeholder=" Enter Username " class="all-inputs"></ion-input>
+          </ion-item>
+          <ion-item class="rentast-input mobile-number-input">
+            <ion-input type="password" placeholder=" Enter password " class="all-inputs"></ion-input>
+           </ion-item>
+        </div>
+
+        <!-- registration  -->
+        <div *ngIf="signup">
+          <ion-item class="rentast-input">
+            <span class="input-icons"><ion-icon name="mail-outline"></ion-icon></span>
+            <span><ion-input type="email" placeholder="Email ID" class="all-inputs"></ion-input></span>
+          </ion-item>
+          <ion-item class="rentast-input">
+            <span class="input-icons"><ion-icon name="lock-closed-outline"></ion-icon></span>
+            <span><ion-input type="password" placeholder="Password" class="all-inputs password-input"></ion-input></span>
+          </ion-item>
+          <ion-item class="rentast-input">
+            <span class="input-icons"><ion-icon name="lock-closed-outline"></ion-icon></span>
+            <span><ion-input type="password" placeholder="Conform Password" class="all-inputs"></ion-input></span>
+          </ion-item>
+          <ion-item class="rentast-input mobile-number-input">
+            <span class="input-icons"><ion-icon name="phone-portrait-outline"></ion-icon></span>
+            <span><ion-input type="Number" placeholder="Mobile Number" class="all-inputs"></ion-input></span>
+          </ion-item>
+        </div> 
+        <!-- registration ends here -->
+        <!-- otp starts here -->
+
+        <div class="otp-container" *ngIf="false">
+          <ion-text class="otp-text">+91 Mobile Number</ion-text>
+          <div class="otp-inputs">
+            <ng-otp-input  [config]="{length:4, inputStyles:{width: '3.5rem', height:'3.5rem', margin:'0 1.25rem 0 0', border:'transparent', background:'#D9D9D930'}}"></ng-otp-input>
+        </div>
+        <ion-text class="otp-text otp-expires">Otp expires in : 00:59</ion-text>
+        <p><ion-text class="otptext otp-expires resend-Otp">Don't Recive OTP?RESEND OTP</ion-text></p>
+        </div> 
+
+        <!-- otp ends here-->
+        <ion-button expand="block" *ngIf="login" (click)="loginInfo()">login</ion-button>   
+        <ion-button expand="block" *ngIf="signup">Register</ion-button>      <!-- signup  -->
+        <!-- <ion-button expand="block" *ngIf="false">Continue</ion-button>     login  -->
+         <!-- <ion-button expand="block" >Submit</ion-button>     otp  -->
+
+        <ion-text class="or-line-para">or</ion-text>
+        <div class="signup-with-con">
+          <div class="horizontal-line">
+            <hr class="line">
+          </div>
+          <div class="signup-with"  *ngIf="signup">Signup With</div> 
+          <div class="signup-with"  *ngIf="login">Login With</div>
+          <!-- /*login * -->
+           <div class="horizontal-line">
+            <hr class="line">
+          </div>
+        </div>
+       <div class="for-logo">
+          <ion-icon name="logo-google"></ion-icon>
+          <ion-icon name="radio-button-off" class="lp-logo"></ion-icon>
+        </div>
+ 
+      </div>
+    </ng-template>
+  </ion-modal>
+</ion-content>

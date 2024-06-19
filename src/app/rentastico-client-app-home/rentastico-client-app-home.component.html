@@ -1,0 +1,118 @@
+<ion-content class="container">
+
+  <ion-grid>
+    <ion-row style="color: white;">
+      <ion-col> <ion-icon name="chevron-back-outline" class="leftarrow"></ion-icon> </ion-col>
+      <ion-col class="rentast">RENTAST/CO</ion-col>
+      <ion-col><ion-button class="button">Show-Map<ion-icon name="map-outline"
+            style="margin-left: 5px;"></ion-icon></ion-button></ion-col>
+    </ion-row>
+
+  </ion-grid>
+  <ion-row style="color: white;">
+    <ion-col class="ion-text-center flex-total">
+      <ion-text class="">Flexible</ion-text>
+      <span>|</span>
+      <ion-text class="flex-active">Non-Flexible</ion-text>
+    </ion-col>
+  </ion-row>
+  <div class="main-b-p">
+    <ion-item class="mapinput">
+      <span><ion-icon name="location-outline" class="inputfonts"></ion-icon></span>
+      <ion-input type="text" placeholder="Conchas Chinas, PPueerto Vallarta, Mexico"></ion-input>
+    </ion-item>
+    <div class="datebox">
+      <ion-item class="dateinput">
+        <span><ion-icon name="calendar-outline" class="inputfonts"></ion-icon></span>
+        <ion-input type="number" placeholder="06/02/24 - 12/03/24"></ion-input>
+      </ion-item>
+      <ion-item class="adultsinput">
+        <span><ion-icon name="person-outline" class="inputfonts"></ion-icon></span>
+        <ion-input type="number" placeholder="2 Adults"></ion-input>
+      </ion-item>
+    </div>
+    <div class="text-scroller">
+      <div class="scroller">
+        <ion-row class="scrollingrows">
+          <p class="travel">Drive & stay</p>
+          <p class="time">How Long & far</p>
+        </ion-row>
+        <ion-row class="scrollingrowss">
+          <p class="travel">Promo Travels</p>
+          <p class="time">Go Anytime</p>
+        </ion-row>
+        <ion-row class="scrollingrowss">
+          <p class="travel">Flash Travels</p>
+          <p class="time">Within a Month</p>
+        </ion-row>
+        <ion-row class="scrollingrowss">
+          <p class="travel">Micro Tips</p>
+          <p class="time">M ini Tips</p>
+        </ion-row>
+        <ion-row class="scrollingrowss">
+          <p class="travel">Multi Search</p>
+          <p class="time">Combined Stayz</p>
+        </ion-row>
+      </div>
+    </div>
+    <ion-grid class="ion-no-padding">
+      <ion-row class="ion-justify-content-center">
+        <ion-col class="search ">
+          <ion-label>Search Results</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-button class="filter-icon-button">
+            <ion-icon name="options-outline" class="filter-icon"></ion-icon>
+            Filter
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <ion-grid>
+    <ion-card class="card" *ngFor="let image of images">
+      <div class="img-data-card">
+        <div class="img-sub-card">
+          <img alt="Silhouette of mountains" [src]="image.src" class="imgclass">
+        </div>
+        <div class="data-sub-card">
+          <div class="discount-icon">
+            <ion-icon name="analytics-outline" class="offer-icon"></ion-icon>
+          </div>
+          <ion-text>
+            <div class="vallarta-premier">
+              <h6 class="vallarta-text">Vallarta premiere</h6>
+            </div>
+          </ion-text>
+
+          <div class="map-icon">
+            <ion-icon name="location-outline"></ion-icon>
+            <h6 class="concha-text">Concha's Chinas 58, Vicente Rosales</h6>
+          </div>
+
+          <ion-row>
+            <ion-col size="8" class="cost-tax">
+              <ion-text>
+                <h6 class="availability">7 NIGHTS,4 GUESTS</h6>
+                <h1 class="cost">$1645 USD</h1>
+                <h6 class="tax">Included taxes and fees</h6>
+              </ion-text></ion-col>
+            <ion-col size="4" class="rating-viewdetails">
+              <span class="rating">4.5<ion-icon name="star-half-outline" class="rate-icon"></ion-icon></span>
+              <ion-button class="view-details">View-Details</ion-button>
+            </ion-col>
+          </ion-row>
+        </div>
+      </div>
+    </ion-card>
+  </ion-grid>
+</ion-content>
+    <div class="bottom">
+     <ion-row class="menu-btn-icons">
+        <ion-col class="Home-icon"><ion-icon name="home-outline"></ion-icon></ion-col>
+        <ion-col class="Home-icon"><ion-icon name="heart-outline"></ion-icon></ion-col>
+        <ion-col class="Home-icon"><ion-icon name="mic-outline"></ion-icon></ion-col>
+        <ion-col class="Home-icon"><ion-icon name="notifications-outline"></ion-icon></ion-col>
+        <ion-col class="Home-icon"><ion-icon name="person-outline"></ion-icon></ion-col>
+      </ion-row>
+    </div>
