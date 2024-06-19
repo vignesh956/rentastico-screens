@@ -1,0 +1,7 @@
+{
+  "name": "rentastico-new",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
