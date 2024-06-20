@@ -1,0 +1,38 @@
+<ion-header class="head1">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="5">
+        <ion-icon (click)="backClicked()" name="chevron-back-outline" class="icon1"></ion-icon>
+      </ion-col>
+      <ion-col size="7">
+        <ion-text class="text1">Settings</ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  </ion-header>
+  
+  <ion-content class="container">
+      <ion-row class="inputRow">
+    <ion-text class="inputText1">Current Password*</ion-text><br>
+      <ion-input  placeholder="Password" class="input1">
+      <ion-icon name="eye-outline" slot="end" class="eyeicon1"></ion-icon>
+    </ion-input>
+  </ion-row>
+  
+  <ion-row class="inputRow">
+    <ion-text class="inputText1">New Password*</ion-text>
+    <ion-input placeholder="Password" class="input1">
+      <ion-icon name="eye-outline" slot="end" class="eyeicon1"></ion-icon>
+    </ion-input>
+  </ion-row>
+  
+  <ion-row class="inputRow">
+    <ion-text class="inputText1">Confirm New Password*</ion-text>
+    <ion-input placeholder="Password" class="input1">
+    </ion-input>
+  </ion-row>
+  
+  <ion-row class="footer">
+    <ion-button  class="save-btn">Save</ion-button>
+  </ion-row>
+  </ion-content>

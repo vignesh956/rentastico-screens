@@ -1,0 +1,27 @@
+<ion-header class="header">
+  <ion-grid>
+  <ion-row>
+  <ion-col size="4.2"><ion-icon (click)="backclicked()" name="chevron-back-outline" class="back-outline"></ion-icon></ion-col>
+  <ion-col size="7.8" class="heading-text-col"><ion-text class="heading-text">Overview</ion-text></ion-col>
+  </ion-row>
+  </ion-grid>
+  </ion-header>
+  <ion-content class="container">
+   <ion-row class="input-row">
+    <ion-text class="input-text">Email</ion-text>
+    <ion-input  type="email" placeholder="userdashbaord@gmail.com" class="input-box"></ion-input>
+    <ion-text class="input-text">Address</ion-text>
+    <ion-input  type="text" placeholder="Upper Tapovan,Rishikesh,India" class="input-box"></ion-input>
+    <ion-text class="input-text">Country</ion-text>
+    <ion-input placeholder="United kingdom" class="input-box"></ion-input>
+    <ion-text class="input-text">Languages</ion-text>
+    <ion-input  type="text" placeholder="French,English,hindi" class="input-box"></ion-input>
+    <ion-text class="input-text">Phone</ion-text>
+    <ion-input  type="number" placeholder="9988775544" class="input-box"></ion-input>
+    <ion-text class="input-text">Timezone</ion-text>
+    <ion-input type="text" placeholder="DST" class="input-box"></ion-input>
+   </ion-row>
+   <ion-row class="footer">
+    <ion-button  class="save-btn">Save</ion-button>
+   </ion-row>
+  </ion-content>

@@ -1,0 +1,45 @@
+<ion-content>
+  <div class="main">
+    <ion-icon (click)="backClicked()" class="icons1" name="chevron-back-outline"></ion-icon>
+    <div class="texts">
+      <ion-text class="text1">profile</ion-text>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <img src="../assets/Group 286.png" alt="Image"><br><br>
+    <ion-text class="text2">Dhanvir Singh</ion-text>
+  </div><br>
+
+
+  <ion-list [inset]="true" class="list">
+    <ion-item>
+      <ion-label (click)="clickit()">My profile</ion-label>
+      <ion-icon class="icons2" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label (click)="clickin()">Overview</ion-label>
+      <ion-icon  class="icons2" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+    <ion-item>
+     <ion-label>Reviews</ion-label>
+     <ion-icon class="icons2" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label>Help</ion-label>
+      <ion-icon  class="icons2" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label (click)="clickSettings()">Settings</ion-label>
+      <ion-icon  class="icons2" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+  </ion-list><br><br><br><br><br><br><br><br><br><br>
+
+
+  <div style="text-align: center;">
+    <ion-button class="btn">Logout</ion-button>
+  </div>
+
+
+</ion-content>
