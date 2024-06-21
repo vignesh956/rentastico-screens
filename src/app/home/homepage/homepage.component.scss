@@ -1,0 +1,277 @@
+#head {
+    margin: 0px;
+    background-color: #001621;
+  }
+  
+  .vertical-icons {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .circle-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: #a9adad; /* Make background transparent */
+    border: 2px solid transparent; /* Make border transparent */
+    border-radius: 50%; /* Make the div a circle */
+    cursor: pointer;
+    position: absolute;
+    left: 0; /* Align to the left */
+    top: 0; /* Align to the top */
+    z-index: 10;
+  }
+  .row1text{
+    margin-top: 7px; font-size: 13px; margin-left: 56px;
+  }
+  
+  .circle-icon ion-icon {
+    color: white; /* Color of the icon */
+    font-size: 24px;
+  }
+  .scrolerText{
+    margin: 1px 13px 1px 4px;
+  }
+  .scrolerText:active{
+    color: #ffffff;
+  }
+  
+  
+  .icon-text-pair {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: appear 0.5s ease-in-out forwards;
+    color: #666666;
+    border: none;
+  }
+  
+  @keyframes appear {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .icon-text-pair:nth-child(2) {
+    animation-delay: 0s;
+  }
+  
+  .icon-text-pair:nth-child(3) {
+    animation-delay: 0.5s;
+  }
+  
+  .icon-text-pair:nth-child(4) {
+    animation-delay: 1s;
+  }
+  
+  ion-icon {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+  
+  span {
+    font-size: 14px;
+  }
+  
+  .text-scroller {
+    overflow-x: auto;
+    white-space: nowrap;
+    background-color: #010a0f;
+  
+    color: #737373;
+  }
+  
+  .scroller {
+    display: flex;
+    gap: 10px;
+    padding: 0 10px;
+  }
+  
+  .rowss {
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  
+  .size {
+    margin: 0 5px;
+  }
+  
+  .image-scroller {
+    overflow-x: auto;
+    height: 260px;
+    background-color: #010a0f;
+   
+  }
+  
+  .image-scroller .scroller {
+    display: flex;
+    gap: 10px;
+    padding: 0 10px;
+  }
+  
+  .card {
+    min-width: 150px;
+    height: 252px;
+  }
+  
+  .flexing {
+    color: #9d9fa5;
+    margin: 13px 18px 1px 9px;
+  }
+    
+  .color {
+    --background: #001a26;
+    --color: aliceblue;
+    font-size: 19px;
+    height: 40px;
+  }
+  
+  .inputLabels {
+    margin: 0px -1px 0px 0px;
+    line-height: 0px;
+    font-size: 0.8rem;
+    font-weight: 900;
+    color: #838383;
+  }
+  
+  .label-container {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+  }
+  
+  .label-container ion-icon {
+    margin-right: 8px;
+  }
+  #flex:active{
+    color: #FD7000;
+    
+  }
+  .color ion-item {
+    --highlight-color-focused: var(--ion-color-primary);
+    --min-height: 60px;
+  }
+  
+  .inputLabels {
+    font-size: 0.8rem;
+    font-weight: normal;
+  }
+  
+  #Row1 {
+    background-color: #002d44;
+  }
+  
+  #button {
+    font-weight: 900;
+    font-size: 13px;
+    width: 100%;
+    --background: #023047;
+  }
+  
+  #content1 {
+    --background: #010a0f;
+  }
+  
+  .colum1 {
+    --background: #010a0f;
+    color: #ffffff;
+    height: 65px;
+  }
+  
+  ion-toolbar.colum1 {
+    padding: 0;
+  }
+  
+  .logo-text {
+    display: flex;
+    align-items: center;
+  }
+  
+  .currency-text {
+    text-align: right;
+  }
+  
+  .logo-text ion-icon {
+    margin-right: 10px;
+  }
+  
+  
+ 
+
+ion-segment-button{
+  
+  // --border-bottom-width: 1px solid blue;
+  // --border-color:blue;
+}
+
+.inActive{
+  // border-bottom: rgb(183, 183, 189) solid 3px;
+}
+.ionButtons{
+  width: 54px;
+  border: none;
+  height: 10px;
+  color: black;
+  --background: white;
+  box-shadow: none;
+
+}
+.flexing {
+  cursor: pointer;
+}
+
+.active {
+  color: #FD7000;
+}
+
+.inactive {
+  color: white;
+}
+.custom-footer {
+  position: fixed;
+  bottom: 0;
+  width: 90%;
+  background-color: #f8f8f8;
+  z-index: 10;
+  border-radius: 32px;
+  margin: 6px;
+}
+
+ion-segment-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:0px;
+  cursor: pointer;
+  min-width:30px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  --color: black;
+  --color-checked:black;
+}
+
+ion-segment-button ion-icon {
+  font-size: 24px;
+  color: gray;
+}
+
+
+ion-segment-button:hover {
+  transform: translateY(-3px);
+}
+.Row1{
+    height: 100vh;
+}
