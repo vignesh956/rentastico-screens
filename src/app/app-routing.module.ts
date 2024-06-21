@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { RentasticoClientAppHomeComponent } from './rentastico-client-app-home/rentastico-client-app-home.component';
 
 const routes: Routes = [
   {
@@ -13,12 +14,12 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./home/home.module').then( m => m.HomeModule)
   },
   {
-    path:'profiledashboard',
-    loadChildren: () => import('./profile-dashboard/profile-dashboard.module').then(m => m.ProfileDashboardModule)
-  } 
+    path:'rentastico',
+    component:RentasticoClientAppHomeComponent
+  }
 ];
 @NgModule({
   imports: [
