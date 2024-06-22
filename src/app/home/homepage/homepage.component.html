@@ -1,0 +1,196 @@
+
+<ion-grid id="head">
+  <ion-row style="height: 100%;">
+    <ion-col *ngIf="isRow1Visible" size="2" class="Row1">
+      <div class="vertical-icons">
+        <div class="icon-text-pair" style="color: #FFFFFF;">
+          <ion-icon name="home-outline"></ion-icon>
+          <span>Home</span>
+        </div>
+        <div class="icon-text-pair">
+          <ion-icon name="person-outline"></ion-icon>
+          <span>Profile</span>
+        </div>
+        <div class="icon-text-pair">
+          <ion-icon name="settings-outline"></ion-icon>
+          <span>Settings</span>
+        </div>
+        <div class="icon-text-pair">
+          <ion-icon name="calendar-outline"></ion-icon>
+          <span>Calendar</span>
+        </div>
+        <div class="icon-text-pair">
+          <ion-icon name="card-outline"></ion-icon>
+          <span>Card</span>
+        </div>
+      </div>
+    </ion-col>
+
+    <ion-col [size]="isRow1Visible ? 10 : 12" class="Row1">
+      <ion-header>
+        <ion-toolbar class="colum1">
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <div class="logo-text">
+                  <ion-icon name="logo-ionic" size="large" style="margin: 12px 4px 5px -9px;"></ion-icon>
+                  <h6 style="font-size: 1.2rem; margin-bottom: 0px;">RENTAST/CO</h6>
+                </div>
+              </ion-col>
+              <ion-col>
+                <h6 class="row1text
+                ">ENG <strong style="font-size: 2rem;">.</strong> INR</h6>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content style="height: 200px;" class="colum1">
+        <!-- First Row - Buttons -->
+        <ion-grid style="margin: 1px 1px 1px 1px;">
+          <ion-row>
+            <ion-col style="font-size: 1rem; left: 50px;">
+              <ion-text 
+                id="flex" 
+                class="flexing" 
+                [ngClass]="{ 'active': isFlexibleActive, 'inactive': !isFlexibleActive }" 
+                (click)="toggleFlexibility(true)">
+                Flexible
+              </ion-text>
+              <ion-text class="flexing">|</ion-text>
+              <ion-text 
+                id="nonflex" 
+                class="flexing" 
+                [ngClass]="{ 'active': !isFlexibleActive, 'inactive': isFlexibleActive }" 
+                (click)="toggleFlexibility(false)">
+                NonFlexible
+              </ion-text>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <div class="circle-icon" (click)="toggleIcons()">
+          <ion-icon [name]="iconName"></ion-icon>
+        </div>
+          <!-- Second Row - Inputs -->
+          <ion-row>
+            <ion-col>
+              <ion-item class="color">
+                <div class="label-container">
+                  <ion-icon name="location-outline"></ion-icon>
+                  <ion-label position="stacked" class="inputLabels">Where do you want to go?</ion-label>
+                </div>
+                <ion-input  [(ngModel)]="whereToGo"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+         
+        <ion-row>
+          <ion-col size="6">
+            <ion-item class="color">
+              <div class="label-container">
+                <ion-icon name="calendar-outline"></ion-icon>
+                <ion-label position="stacked" class="inputLabels">From Date</ion-label>
+              </div>
+              <ion-input type="date" [(ngModel)]="fromDate" ></ion-input>
+              <!-- <ion-datetime 
+                [(ngModel)]="fromDate" 
+                  display-format="DD MMM YYYY" 
+                picker-format="DD MMM YYYY" 
+                [min]="minDate" 
+                [max]="toDate ? toDate : maxDate"
+              ></ion-datetime> -->
+            </ion-item>
+          </ion-col>
+          <ion-col size="6">
+            <ion-item class="color">
+              <div class="label-container">
+                <ion-icon name="calendar-outline"></ion-icon>
+                <ion-label position="stacked" class="inputLabels">To Date</ion-label>
+              </div>
+              <ion-input type="date" [(ngModel)]="toDate" ></ion-input>
+              
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+
+
+          <ion-row>
+            <ion-col>
+              <ion-item class="color">
+                <div class="label-container">
+                  <ion-icon name="person-outline"></ion-icon>
+                  <ion-label position="stacked" class="inputLabels">How many people are traveling?</ion-label>
+                </div>
+                <ion-input  [(ngModel)]="numberOfPeople"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          
+        </ion-content>
+
+      <div>
+      <ion-row>
+        <ion-col size-sm="3" >
+        <ion-button xs=5 id="button" (click)="search()">Search</ion-button>
+      </ion-col>
+      </ion-row>
+      </div>
+
+      <ion-content id="content1">
+        <div class="text-scroller">
+          <div class="scroller">
+            <div class="rowss">
+              <p class="scrolerText">Host Tv</p><strong class="size">|</strong>
+            </div>
+            <div class="rowss">
+              <p class="scrolerText">Hot Deals</p><strong class="size">|</strong>
+            </div>
+            <div class="rowss">
+              <p class="scrolerText">Top Places</p><strong class="size">|</strong>
+            </div>
+            <div class="rowss">
+              <p>Travel Works</p><strong>|</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="image-scroller">
+          <div class="scroller">
+            <ion-card *ngFor="let image of images" class="card" style="margin: 1px 6px 1px 10px; min-width: 120px; background-color: #010A0F;">
+              <img [src]="image.src" style="width: 100%; height: 25vh; border-radius: 30px; object-fit: cover;">
+              <ion-text>
+                <h6 style="margin: 5px; color: #FFFFFF; font-size: 0.9rem;">{{image.title}}</h6>
+                <h6 style="margin: 4px; font-size: 0.8rem;">{{image.Data}}</h6>
+              </ion-text>
+            </ion-card>
+          </div>
+        </div>
+     
+      </ion-content>
+    </ion-col>
+  </ion-row>
+  <ion-footer class="custom-footer">
+    <ion-segment [(ngModel)]="segment">
+      <ion-segment-button value="home" (click)="selectSegment('home')" [ngClass]="{ 'active': segment === 'home' }">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="heart" (click)="selectSegment('heart')" [ngClass]="{ 'active': segment === 'heart' }">
+        <ion-icon name="heart-outline"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="mic" (click)="selectSegment('mic')" [ngClass]="{ 'active': segment === 'mic' }">
+        <ion-icon name="mic-outline"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="notifications" (click)="selectSegment('notifications')" [ngClass]="{ 'active': segment === 'notifications' }">
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="person" (click)="selectSegment('person')" [ngClass]="{ 'active': segment === 'person' }">
+        <ion-icon name="person-circle-outline"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-footer>
+  
+  
+</ion-grid>

@@ -1,20 +1,19 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { HomeRoutingModule } from './home-routing.module';
+import { HomepageComponent } from './homepage/homepage.component';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
-import { HomePage } from './home.page';
-
-import { HomePageRoutingModule } from './home-routing.module';
-import { RentasticoClientAppHomeComponent } from '../rentastico-client-app-home/rentastico-client-app-home.component';
 
 
 @NgModule({
-  imports: [
+  declarations: [HomepageComponent],
+  imports: [FormsModule,
     CommonModule,
-    FormsModule,
-    IonicModule,
-    HomePageRoutingModule
+    HomeRoutingModule,
+    IonicModule
   ],
-  declarations: [HomePage , RentasticoClientAppHomeComponent]
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
-export class HomePageModule {}
+export class HomeModule { }

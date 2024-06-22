@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() { }
 
-  userAuthInfo(data: any) {
+  userAuthInfo(data: string) {
     if (data === 'login') {
       this.login = true
       this.signup = false
@@ -25,12 +25,12 @@ export class LoginComponent implements OnInit {
 
   }
  
-  setOpen(isOpen: any) {
+  setOpen(isOpen: boolean) {
     this.isModalOpen = isOpen;
   }
   loginInfo() {
     this.isModalOpen = false;
-    this.router.navigate(['/home'])
+    this.router.navigate(['home/home'])
   }
 
 }
