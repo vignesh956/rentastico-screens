@@ -14,6 +14,8 @@
     fromDate: any = '';
     toDate: any = '';
     numberOfPeople: number = 0;
+      selectedTab: string = 'drive-stay'; 
+
 
 
     images=[
@@ -75,4 +77,8 @@
       this.segment = segment;
       
     } 
+    
+  selectTab(tab: string) {
+    this.selectedTab = tab; 
+  }
   }

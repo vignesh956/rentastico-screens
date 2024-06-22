@@ -11,10 +11,12 @@ import { RentasticoClientAppHomeComponent } from './rentastico-client-app-home/r
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ProfileDashboardModule } from './profile-dashboard/profile-dashboard.module';
+// import { HomePageModule } from './home/home.module';
 
 @NgModule({
   declarations: [AppComponent,RentasticoClientAppHomeComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule , AuthModule,FormsModule,CommonModule , ProfileDashboardModule],
+  // HomePageModule
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule  , AuthModule,FormsModule,CommonModule , ProfileDashboardModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

@@ -46,28 +46,29 @@
     </div>
     <div class="text-scroller">
       <div class="scroller">
-        <ion-row class="scrollingrows">
+        <ion-row class="scrollingrows" [ngClass]="{'active': selectedTab === 'drive-stay'}" (click)="selectTab('drive-stay')">
           <p class="travel">Drive & stay</p>
           <p class="time">How Long & far</p>
         </ion-row>
-        <ion-row class="scrollingrowss">
+        <ion-row class="scrollingrows" [ngClass]="{'active': selectedTab === 'promo-travels'}" (click)="selectTab('promo-travels')">
           <p class="travel">Promo Travels</p>
           <p class="time">Go Anytime</p>
         </ion-row>
-        <ion-row class="scrollingrowss">
+        <ion-row class="scrollingrows" [ngClass]="{'active': selectedTab === 'flash-travels'}" (click)="selectTab('flash-travels')">
           <p class="travel">Flash Travels</p>
           <p class="time">Within a Month</p>
         </ion-row>
-        <ion-row class="scrollingrowss">
+        <ion-row class="scrollingrows" [ngClass]="{'active': selectedTab === 'micro-tips'}" (click)="selectTab('micro-tips')">
           <p class="travel">Micro Tips</p>
           <p class="time">M ini Tips</p>
         </ion-row>
-        <ion-row class="scrollingrowss">
+        <ion-row class="scrollingrows" [ngClass]="{'active': selectedTab === 'multi-search'}" (click)="selectTab('multi-search')">
           <p class="travel">Multi Search</p>
           <p class="time">Combined Stayz</p>
         </ion-row>
       </div>
     </div>
+    
     <ion-grid class="ion-no-padding">
       <ion-row class="ion-justify-content-center">
         <ion-col class="search ">
@@ -141,3 +142,12 @@
       </ion-segment>
     </ion-footer>
    
+    <div class="bottom">
+     <ion-row class="menu-btn-icons">
+        <ion-col class="Home-icon"><ion-icon name="home-outline"></ion-icon></ion-col>
+        <ion-col class="Home-icon"><ion-icon name="heart-outline"></ion-icon></ion-col>
+        <ion-col class="Home-icon"><ion-icon name="mic-outline"></ion-icon></ion-col>
+        <ion-col class="Home-icon"><ion-icon name="notifications-outline"></ion-icon></ion-col>
+        <ion-col class="Home-icon"><ion-icon name="person-outline"></ion-icon></ion-col>
+      </ion-row>
+    </div>

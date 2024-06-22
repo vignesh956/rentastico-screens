@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,7 +10,7 @@ export class LoginComponent implements OnInit {
   login: boolean = true;
   signup: boolean = false;
   isModalOpen = false;
-  constructor(public router: Router ,) { }
+  constructor(public router: Router ,private cdr: ChangeDetectorRef) { }
 
   ngOnInit() { }
 
@@ -23,14 +23,18 @@ export class LoginComponent implements OnInit {
       this.login = false
     }
 
-  }
+  } 
  
   setOpen(isOpen: boolean) {
     this.isModalOpen = isOpen;
   }
+
   loginInfo() {
     this.isModalOpen = false;
-    this.router.navigate(['home/home'])
+    this.cdr.detectChanges(); 
+   
+    this.router.navigate(['home']);
+    
   }
 
 }

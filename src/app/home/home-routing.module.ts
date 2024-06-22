@@ -6,7 +6,12 @@ import { FullviewpageComponent } from './fullviewpage/fullviewpage.component';
 
 const routes: Routes = [
   {
-    path:'home',
+    path: '',
+    redirectTo: 'search-property',
+    pathMatch: 'full'
+  },
+  {
+    path:'search-property',
     component:HomepageComponent
   },
   {
