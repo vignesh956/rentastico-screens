@@ -1,0 +1,86 @@
+<div class="image-scroller">
+  <div class="backgroundimage">
+    <div>
+       <div class="scroller">
+        <ion-card *ngFor="let image of images" class="card">
+          <img [src]="image.src" [alt]="image.alt">
+        </ion-card>
+      </div> 
+    </div>
+    
+  </div>
+</div>
+<ion-content class="container">
+    <div class="contant">
+      <ion-text class="roomName">Vallarta Premiere</ion-text>
+      <div>
+        <ion-text class="social-icons"><ion-icon name="share-social"></ion-icon></ion-text>
+        <ion-text>
+          <ion-icon class="social-icons" name="copy-outline"></ion-icon>
+        </ion-text>
+      </div>
+    </div>
+    <div class="details-room">
+      <p class="roomDetails">Conchas Chinas 58,Vicente Rosales,249192</p>
+      <p class="spendingdays">7 NIGHTS, 4 GUESTS</p>
+    </div>
+    
+    <div style="display: flex; justify-content: space-between; padding: 1rem;">
+      <div class="price">
+        <ion-text class="price-tag" >$1645 USD</ion-text>
+        <ion-text  class="price-text">Include taxes and fees</ion-text>
+      </div>
+      <div class="star">
+        <ion-icon class="stars"  name="star"></ion-icon>
+        <ion-icon class="stars"  name="star"></ion-icon>
+        <ion-icon class="stars"  name="star"></ion-icon>
+        <ion-icon class="stars"  name="star"></ion-icon>
+        <ion-icon class="stars"  name="star-half"></ion-icon>
+        <div>
+          <ion-text class="review">215 Reviews</ion-text>
+        </div>
+      </div>
+      
+    </div>
+  <div style="overflow:auto">
+    <ul class="overview">
+      <li class="overview-list" (click)="toggleSection('overview')">Overview</li>
+      <li class="overview-list" (click)="toggleSection('availability')">Availability</li>
+      <li class="overview-list" (click)="toggleSection('amenities')">Amenities</li>
+      <li class="overview-list" (click)="toggleSection('reviews')">Reviews</li>
+      <li class="overview-list" (click)="toggleSection('location')">Location</li>
+      <li class="overview-list" (click)="toggleSection('hostTv')">Host Tv</li>
+    </ul>
+  </div>
+<div *ngIf="showOverview">
+  <app-overview></app-overview>
+</div>
+
+
+  <div *ngIf="showAvailability">
+     <app-availability></app-availability>
+  </div>
+
+
+  <div *ngIf="showAmenities">
+    <p>Amenities content</p>
+  </div>
+
+  <div *ngIf="showReviews">
+    <app-reviews></app-reviews>
+  </div>
+
+  <div *ngIf="showLocation">
+    <p>Location content </p>
+  </div>
+
+  <div *ngIf="showHostTv">
+    <p>Host TV content </p>
+  </div>
+
+  <ion-button class="button-book" slot="fixed" >
+    <ion-text> Book Now</ion-text>
+  </ion-button>
+</ion-content>
+
+

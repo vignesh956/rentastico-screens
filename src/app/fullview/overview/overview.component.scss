@@ -1,0 +1,67 @@
+.facilities {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-content {
+    font-size: 12px;
+    margin-top: 7px;
+}
+
+.facilities-row {
+    color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text {
+    align-items: center;
+}
+
+.properties {
+    width: auto;
+    --background: none;
+    margin-top: 15px;
+}
+
+.property {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18.75px;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+}
+
+.property-details {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+    text-align: left;
+    margin-left: 2px;
+}
+
+.list-items {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.list-name {
+    margin-left: 7px;
+    font-size: 12px;
+    margin-bottom: 17px;
+}
+
+.list-detaile {
+    font-size: 12px;
+}
+.button-book {
+    height: 47.67px;
+    left: 50%;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 10px;
+    background: rgba(253, 125, 0, 1);
+    --background: none;
+    transform: translateX(-50%);
+}

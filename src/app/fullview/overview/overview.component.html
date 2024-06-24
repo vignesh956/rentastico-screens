@@ -1,0 +1,62 @@
+<div class="facilities">
+  <div>
+    <div class="facilities-row">
+      <ion-icon name="home" class="text"></ion-icon>
+      <ion-text class="text-content">Entire Suite</ion-text>
+    </div>
+  </div>
+
+  <div>
+    <div class="facilities-row">
+      <ion-icon name="home" class="text"></ion-icon>
+      <ion-text class="text-content">4 Guests</ion-text>
+    </div>
+  </div>
+
+  <div>
+    <div class="facilities-row">
+      <ion-icon name="home"></ion-icon>
+      <ion-text class="text-content">2 Bedrooms</ion-text>
+    </div>
+  </div>
+
+  <div>
+    <div class="facilities-row">
+      <ion-icon name="home"></ion-icon>
+      <ion-text class="text-content">2 Beds</ion-text>
+    </div>
+  </div>
+
+  <div>
+    <div class="facilities-row">
+      <ion-icon name="home"></ion-icon>
+      <ion-text class="text-content">2 baths</ion-text>
+    </div>
+  </div>
+</div>
+
+<div class="properties">
+<ion-title class="property">Property Description</ion-title>
+<ion-card-content class="property-details">Offering on outdoor pool and spa and wellness center, alpha on the 
+  Ganges is located in Rishiekn. Free WIFI access is available in this resorts offering an Offering on
+  outdoor pool and spa and wellness  center, alpha on the Ganges islocated in Rishiekn.</ion-card-content>
+</div>
+
+<div class="properties">
+<ion-title class="property">Property Experience</ion-title>
+<ion-card-content class="property-details">Offering on outdoor pool and spa and wellness center, alpha on the 
+  Ganges is located in Rishiekn. Free WIFI access is available in this  resorts offering an Offering on
+  outdoor pool and spa and wellness  center, alpha on the Ganges islocated in Rishiekn.</ion-card-content>
+</div>
+
+
+<ion-grid class="list-items">
+<ion-row *ngFor="let text of text">
+  <ion-col size="8">
+    <ion-label class="list-name">{{text.name}}</ion-label>
+  </ion-col>
+  <ion-col size="4">
+    <ion-label class="list-detaile">:{{text.details}}</ion-label>
+  </ion-col>
+</ion-row>
+</ion-grid>

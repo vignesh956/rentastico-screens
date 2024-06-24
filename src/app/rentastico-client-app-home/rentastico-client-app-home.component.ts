@@ -54,7 +54,7 @@
       console.log(this.numberOfPeople)
     }
     fullview(){
-      this.router.navigate(['home/fullview'])
+      this.router.navigate(['fullview/common'])
     }
     
     isFlexibleActive: boolean = true;

@@ -23,6 +23,10 @@ const routes: Routes = [
   {
     path:'profiledashboard',
     loadChildren: () => import('./profile-dashboard/profile-dashboard.module').then(m => m.ProfileDashboardModule)
+  },
+  {
+    path:'fullview',
+    loadChildren: () => import('./fullview/fullview.module').then(m => m.FullviewModule)
   } 
 ];
 @NgModule({
