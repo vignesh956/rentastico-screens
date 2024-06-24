@@ -1,0 +1,49 @@
+.header{
+    height: 50px;
+    background-color: #001D2B;
+  }
+  .container{
+    --background: #010A0F;
+  }
+  .back-outline{
+    width: 24px;
+    height: 24px;
+    color: #ffff;
+  }
+  .heading-text{
+    font-size: 16px;
+    color: #ffff;
+    margin-left: 25px;
+  }
+  .heading-text-col{
+    padding: 10px;
+  }
+  .input-row{
+    padding: 10px;
+  }
+  .input-text{
+    font-size: 14px; color: #737373;margin: 10px;
+  }
+  .input-box{
+    background-color:#001B28; 
+    height: 50px; 
+    font-size: 14px; 
+    color: #737373;
+    border-radius: 7px; 
+     margin: 0px 8px;
+      padding-left: 10px!important
+  }
+  .footer{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+  }
+  .save-btn{
+    text-transform: none;
+     text-align:
+      center; --background: #023047;
+      font-size: 16px;
+      margin: 10px 20px;
+      height: 50px; 
+      width: 100%;
+  }

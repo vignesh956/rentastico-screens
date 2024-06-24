@@ -1,0 +1,71 @@
+<ion-grid>
+  <ion-row>
+      <ion-col class="rating-mar">
+          <div class="rating" id="rating-point">
+              <ion-text class="rating-number">4.5</ion-text>
+              <ion-text class="rating-out">Out 0f 5</ion-text>
+          </div>
+          <div class="star-icon">
+              <ion-icon class="mask" name="star"></ion-icon>
+              <ion-icon class="mask" name="star"></ion-icon>
+              <ion-icon class="mask" name="star"></ion-icon>
+              <ion-icon class="mask" name="star"></ion-icon>
+              <ion-icon class="mask" name="star-half"></ion-icon>
+          </div>
+
+      </ion-col>
+      <ion-col class="rating">
+          <div>
+              <ion-text class="rating-num">4.5</ion-text>
+              <ion-icon class="star" name="star"></ion-icon>
+          </div>
+
+          <ion-text class="rating-review">273 Reviews</ion-text>
+      </ion-col>
+      <ion-col class="rating">
+          <ion-text class="rating-percent">88%</ion-text>
+          <ion-text class="recomend">Recommended</ion-text>
+      </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-grid>
+  <ion-row *ngFor="let item of ratings">
+      <ion-col size="1">
+          <div class="rating-number-single">{{ item.rating }}</div>
+      </ion-col>
+      <ion-col size="7" class="rating-bar">
+          <div [style.width]="ratingWidth(item.rating)"></div>
+      </ion-col>
+      <ion-col size="4" class="ion-text-end">
+          <div class="name">{{ item.name }}</div>
+      </ion-col>
+  </ion-row>
+</ion-grid>
+
+
+
+<ion-card *ngFor="let card of cards">
+  <ion-grid>
+      <ion-row>
+          <ion-col size="4"><img [src]="card.src"> </ion-col>
+          <ion-col size="8">
+              <ion-header >
+                  <div class="header-text">
+                      <ion-text class="header-text-name">{{ card.name }}</ion-text>
+                      <ion-text class="header-date">{{ card.date }}</ion-text>
+                  </div>
+                  <div class="card-star-icon">
+                      <ion-icon class="card-mask" name="star" *ngFor="let star of card.stars"></ion-icon>
+                  </div>
+              </ion-header>
+              <ion-text class="para">
+                  {{ card.review }}
+              </ion-text>
+          </ion-col>
+      </ion-row>
+
+  </ion-grid>
+</ion-card>    
+
+

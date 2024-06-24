@@ -1,0 +1,66 @@
+ion-content{
+    --background:black;
+  }
+  .icons1{
+    width: 24px;
+    height: 24px;
+    color: white;
+    padding: 2%;
+  }
+  
+  .texts{
+    margin-top: 2%;
+    margin-left: 32%;
+  
+  }
+  
+  .text1{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18.75px;
+    color: white;
+    margin-top: 2%;
+  }
+  .main{
+    display: flex;
+    background: rgba(0, 29, 43, 1);
+    margin-top: 6% ;
+  }
+  .col1{
+    margin-top: 2.6%;
+  }
+  .card1{
+    --background:gray;
+  }
+  .image{
+    width: 80px;
+    height: 80px;
+  }
+  .container{
+    text-align: center;
+    margin-top: 8%;
+  }
+  .text2{
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+  }
+  ion-item{
+    color:white;
+    --background:rgba(2, 48, 71, 1);
+    margin-top: 2%;
+    height: 50px;
+  }
+  .icons2{
+    color: white;
+  }
+  .list{
+    background: black;
+  }
+  .btn{
+    --background:rgba(2, 48, 71, 1);
+    width: 95%;
+    text-transform: none;
+    --border-radius:7px;
+  }
